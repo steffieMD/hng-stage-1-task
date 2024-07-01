@@ -88,10 +88,6 @@ body {
   padding-top: 150px;
 }
 
-.slack__img {
-  border-radius: 15px;
-}
-
 /* SECTION */
 #section--2 {
   display: flex;
