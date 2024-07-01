@@ -120,7 +120,7 @@ goalsList.querySelectorAll(".section__header").forEach((a, i) => {
 });
 
 // Section Reveal
-const revealSection = function (entries, observer) {
+/* const revealSection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
@@ -136,4 +136,4 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach((section) => {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
-});
+}); */
