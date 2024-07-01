@@ -250,7 +250,17 @@ footer {
 /* MEDIA QUERIES */
 /* Mobile */
 @media only screen and (max-width: 600px) {
-  /* Add mobile styles here */
+  body {
+    width: 600px;
+  }
+
+  .nav__links {
+    font-size: 0.4rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
 }
 
 /* Tablet */
