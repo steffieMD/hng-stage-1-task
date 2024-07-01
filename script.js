@@ -6,6 +6,11 @@ const imgEl = document.querySelector("[data-testid='slackProfilePicture']");
 const timeEl = document.querySelector("[data-testid='currentTimeUTC']");
 const dayEl = document.querySelector("[data-testid='currentDay']");
 const dateEl = document.querySelector("[data-testid='rest__date']");
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const nav = document.querySelector(".nav");
+const headerEl = document.querySelector("header");
+const allSections = document.querySelectorAll(".section");
+const goalsList = document.querySelector(".goals__list");
 
 const now = new Date();
 const day = now.getDay();
@@ -37,7 +42,6 @@ const months = [
 ];
 const year = now.getFullYear();
 
-// let utcTime = Date.UTC(year, month, day);
 let UTCtime = now.getTime();
 
 // Functions
@@ -52,14 +56,6 @@ const handleHover = function (e, opacity) {
     slackname.style.opacity = this;
   }
 };
-
-//   Natural Image Dimensions
-const realImgSize = function () {
-  const realHeight = imgEl.naturalHeight;
-  const realWidth = imgEl.naturalWidth;
-  console.log(realHeight, realWidth);
-};
-realImgSize();
 
 // Set Time
 const setTime = function () {
@@ -82,6 +78,12 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
   }
 });
 
+goalsList.addEventListener("click", function (e) {
+  if (e.target.classList.contains("goal__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView();
+  }
+});
 document
   .querySelector(".nav__links")
   .addEventListener("mouseover", handleHover.bind(0.5));
@@ -89,3 +91,49 @@ document
 document
   .querySelector(".nav__links")
   .addEventListener("mouseout", handleHover.bind(1));
+
+btnScrollTo.addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector("#section--1").scrollIntoView();
+});
+
+// Sticky Navbar
+const navHeight = nav.getBoundingClientRect().height;
+const stickyNav = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+const headerOberserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+headerOberserver.observe(headerEl);
+
+// GOALS OUTLINED
+goalsList.querySelectorAll(".section__header").forEach((a, i) => {
+  if (i % 2 === 0) {
+    a.style.transform = `translateX(10%)`;
+  } else a.style.transform = `translateX(-15%)`;
+});
+
+// Section Reveal
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+  rootMargin: "40px",
+});
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});

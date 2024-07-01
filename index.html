@@ -7,6 +7,9 @@
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css" />
     <title>My Career Plan</title>
   </head>
   <body>
@@ -17,18 +20,19 @@
         >
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Features</a>
+            <a class="nav__link" href="#section--2">Her</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Operations</a>
+            <a class="nav__link" href="#section--1">Her Goals</a>
           </li>
+
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">Connect With Me</a>
+            <a class="nav__link" href="#section--3">Connect With Her</a>
           </li>
         </ul>
       </nav>
 
-      <div>
+      <div data-testid="header__div">
         <h1>My Career Goals</h1>
         <strong data-testid="date"
           ><span data-testid="currentTimeUTC">10:33 AM </span>,
@@ -38,93 +42,126 @@
       </div>
     </header>
 
-    <section class="section intro-section" id="section--2">
-      <img
-        src="media/jpg/IMG_6022.JPG"
+    <section class="section " id="section--2">
+        <div class="section__description">
+         <img
+        src="media/jpg/image.png"
         class="slack__img"
         data-testid="slackProfilePicture"
         alt="Steff's slack image" />
       <div data-testid="intro-section__div">
-        <h4>
+        <h4 class="intro__text">
           Hi, i'm <span data-testid="slackDisplayName">Stefff</span>, a
-          Front-end Developer from Nigeria. These are my goals for the next 2
-          years
+          Front-end Developer from Nigeria. For my Stage 1 task, I was asked to outline my goals for the next 2 years! 
         </h4>
         <button class="btn--text btn--scroll-to">
           Interested? Let's find out! &DownArrow;
         </button>
       </div>
+    </div>
+
     </section>
+
     <section class="section" id="section--1">
-      <div class="section__title">
-        <h2 class="section__description">Features</h2>
-        <h3 class="section__header">
-          Everything you need in a modern bank and more.
+       <h2 class="section__description">Goals Outlined</h2>
+       <ul class="goals__list">
+       
+            <h3 class="section__header">Enhance Technical Skills</h3>
+        
+       
+            <h3 class="section__header">Project Management</h3>
+       
+       
+            <h3 class="section__header">Collaborative Work</h3>
+        
+       
+            <h3 class="section__header">Problem-Solving and Critical Thinking</h3>
+       
+       
+            <h3 class="section__header">Personal Branding and Networking</h3>
+        
+       
+            <h3 class="section__header">Specialization</h3>
+        
+            <h3 class="section__header">Open-Source Contributions</h3>
+        
+       
+            <h3 class="section__header">Enhance Technical Skills</h3>
+       
+       
+            <h3 class="section__header">Certification and Continuing Education</h3>
+        
+       
+            <h3 class="section__header">Mentorship and Leadership</h3>
+        
+       
+            <h3 class="section__header">
+          Work-Life Balance 
         </h3>
-      </div>
+    </section>
 
-      <div class="features">
-        <!--  <img
-          src="img/digital-lazy.jpg"
-          data-src="img/digital.jpg"
-          alt="Computer"
-          class="features__img lazy-img" /> -->
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-monitor"></use>
-            </svg>
+   
+    
+    <section class="section " id="goal-section--1">
+        <h2 class="career-section--header ">My Career Timeline Year 1</h2>
+        <div class="border">
+          <div class="border--1">
+            <h3 class="month-header">Months 1-3</h3>
+            <p class="text"> SURVIVE HNG!.</p>
           </div>
-          <h5 class="features__header">100% digital bank</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
-            sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
-            debitis ducimus.
-          </p>
-        </div>
-
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
-            </svg>
+          <div class="border--2">
+            
+            <p class="text"> Dig deeper into Javacript, learning React, Vue.js and eventually Angular. Build projects to gain practical experience</p>
+            <h3 class="month-header">Months 4-6</h3>
           </div>
-          <h5 class="features__header">Watch your money grow</h5>
-          <p>
-            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
-            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
-            quibusdam!
-          </p>
-        </div>
-        <!-- <img
-          src="img/grow-lazy.jpg"
-          data-src="img/grow.jpg"
-          alt="Plant"
-          class="features__img lazy-img" /> -->
-
-        <!-- <img
-          src="img/card-lazy.jpg"
-          data-src="img/card.jpg"
-          alt="Credit card"
-          class="features__img lazy-img" /> -->
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+          <div class="border--3">
+            <h3 class="month-header">Months 7-9</h3>
+            <p class="text">Study UI/UX principles, learn color theory, typography and layout design. Build appealing and user friendly interfaces. </p>
           </div>
-          <h5 class="features__header">Free debit card included</h5>
-          <p>
-            Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
-            eveniet consequatur odit quam quos possimus assumenda dicta fuga
-            inventore ab.
-          </p>
-        </div>
+          <div class="border--4">
+            
+            <p class="text">Build responsive websites that adapt to different screen sizes and devices. Improve knowlegde on media queries, flexible layouts, and mobile-first design. Create responsive versions of your previous projects.</p>
+            <h3 class="month-header">Months 10-12</h3>
+          </div>
+          
       </div>
     </section>
+   
+  
+    <section class="section" id="goal-section--2"> 
+      <h2 class="career-section--header
+      ">My Career Timeline Year 2</h2>
+      <div class="border">
+          <div class="border--1">
+            <h3 class="month-header">Months 13-15</h3>
+            <p class="text"> Further develop my skills in responsive design and mobile optimization.Experiment with progressive web apps and browser extensions.</p>
+          </div>
+          <div class="border--2">
+            
+            <p class="text"> Exploring advanced front-end technologies such as WebGL, WebSockets, while gaining experience with build tools like Webpack or Gulp. Understanding how to optimize website performance.</p>
+            <h3 class="month-header">Months 16-18</h3>
+          </div>
+          <div class="border--3">
+            <h3 class="month-header">Months 19-20</h3>
+            <p class="text"> Networking with potential employers and attending industry events to make connections. Collaborating with other developers on open source projects. Learn how to work effectively in a team</p>
+          </div>
+          <div class="border--4">
+            
+            <p class="text"> Career Advancement by building a professional portfolio showcasing my best work and preparing for job interviews. Networking with potential employers and attending industry events to make connections.</p>
+            <h3 class="month-header">Months 21-24</h3>
+          </div>
+          
+      </div>
+   
+  </section>
 
     <section class="section" id="section--3">
-      <button></button>
+      <h4>Slack Info</h4>
+      <h4>Slack ID: <span data-testid="slackDisplayName">stefff</span></h4>
+      <h4>
+        Slack Email:
+        <span data-testid="slackEmail">stephaniemetieh@gmail.com</span>
+      </h4>
     </section>
 
     <script src="/script.js"></script>
