@@ -12,7 +12,6 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
@@ -151,7 +150,7 @@ p {
 }
 
 .header {
-  padding: 0;
+  padding: 0 3rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -254,13 +253,18 @@ footer {
     width: 600px;
   }
 
+  /* nav */
   .nav__links {
     font-size: 0.4rem;
   }
 
-  .logo {
+  .nav__logo {
     font-size: 2rem;
-    color: red;
+  }
+
+  /* text */
+  h1 {
+    font-size: 4rem;
   }
 }
 
