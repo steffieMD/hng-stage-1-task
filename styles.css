@@ -171,7 +171,7 @@ p {
 }
 
 h1 {
-  margin-top: 80px;
+  padding-top: 80px;
   font-size: 5.5rem;
   line-height: 1.35;
 }
@@ -306,14 +306,14 @@ footer {
   .border--1,
   .border--3,
   .border--5 {
-    height: 250px;
+    height: 280px;
   }
 
   .border--2,
   .border--4,
   .border--6 {
     padding: 20px;
-    height: 250px;
+    height: 280px;
   }
 
   .text {
@@ -339,5 +339,20 @@ footer {
 
   .img--div {
     justify-content: center;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    padding-top: 0;
+  }
+
+  header {
+    padding-bottom: 250px;
+  }
+  #section--2 {
+    grid-template-columns: 0 1fr 2fr;
+    gap: 100px;
   }
 }
