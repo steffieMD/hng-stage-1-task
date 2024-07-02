@@ -348,11 +348,12 @@ footer {
     padding-top: 0;
   }
 
-  header {
-    padding-bottom: 250px;
-  }
   #section--2 {
     grid-template-columns: 0 1fr 2fr;
     gap: 100px;
+  }
+
+  [data-testid="header__div"] {
+    margin-top: 120px;
   }
 }
