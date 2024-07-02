@@ -18,13 +18,17 @@ body {
   font-weight: 300;
   color: #444;
   line-height: 1.9;
+  height: 100vh;
+  width: 100%;
   background-color: #f3ebe0;
+  overflow-x: hidden;
 }
 
 /* HEADER */
 .header {
   padding: 0 3rem;
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,15 +92,16 @@ body {
   padding-top: 150px;
 }
 
-.slack__img {
-  border-radius: 15px;
-}
-
 /* SECTION */
 #section--2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 2fr 0.5fr;
+  gap: 100px;
+}
+
+[data-testid="intro-section__div"] {
+  display: grid;
+  grid-template-rows: auto auto;
 }
 
 #section--3 {
@@ -185,8 +190,6 @@ h4 {
   font-weight: 500;
   color: var(--color-primary);
   border: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -243,6 +246,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  width: 100%;
 }
 
 .footer-links a {
@@ -258,10 +262,6 @@ footer {
 /* MEDIA QUERIES */
 /* Mobile */
 @media only screen and (max-width: 600px) {
-  body {
-    width: 600px;
-  }
-
   /* nav */
   .nav__links {
     font-size: 0.4rem;
@@ -303,6 +303,20 @@ footer {
 
   .text {
     font-size: 0.6rem;
+  }
+
+  #section--2 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+  }
+
+  .intro__text {
+    padding-top: 0;
+  }
+
+  .slack__img {
+    resize: none !important;
   }
 }
 
